@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { React } from 'react';
 import { Playfair_Display } from 'next/font/google'
 import './globals.css'
 

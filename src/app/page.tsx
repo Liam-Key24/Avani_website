@@ -1,8 +1,7 @@
-import React from 'react';
-import { Nav } from '../components/Nav'
-import ReservationForm from '../components/reservation-form'
-import { MenuSection } from '../components/menu-section'
-import { ContactSection } from '../components/contact-section'
+import { Nav } from '@/components/Nav'
+import { ReservationForm } from '@/components/ReservationForm'
+import { MenuSection } from '@/components/MenuSection'
+import { ContactSection } from '@/components/ContactSection'
 
 export default function Home() {
   return (
