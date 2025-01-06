@@ -57,48 +57,56 @@ export default function ReservationForm() {
               className="bg-transparent border-sage-300 italic opacity-70 text-sage-800"
               required
             />
-            <div className="flex gap-4">
-              <Select value={formData.guests} onValueChange={(value) => setFormData({ ...formData, guests: value })}>
-                <SelectTrigger className="w-full bg-transparent border-sage-300">
-                  <SelectValue placeholder="Guests" />
-                </SelectTrigger>
-                <SelectContent>
-                  {[...Array(12)].map((_, i) => (
-                    <SelectItem key={i + 1} value={(i + 1).toString()}>
-                      {i + 1} {i === 0 ? 'Guest' : 'Guests'}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-              <Input
-                type="date"
-                value={formData.date}
-                onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                className="bg-transparent border-sage-300 italic opacity-70 text-sage-800"
-                required
-              />
+            <div className="inline-flex gap-4 w-full">
+              <div className="flex-1">
+                <Input
+                  type="date"
+                  value={formData.date}
+                  onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                  className="w-full bg-transparent italic text-secondary"
+                  required
+                />
+              </div>
+              <div className="flex-1">
+                <Select value={formData.guests} onValueChange={(value) => setFormData({ ...formData, guests: value })}>
+                  <SelectTrigger className="w-full bg-transparent border-sage-300">
+                    <SelectValue placeholder="Guests" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {[...Array(12)].map((_, i) => (
+                      <SelectItem key={i + 1} value={(i + 1).toString()}>
+                        {i + 1} {i === 0 ? 'Guest' : 'Guests'}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="flex-1">
+                <Select value={formData.time} onValueChange={(value) => setFormData({ ...formData, time: value })}>
+                  <SelectTrigger className="w-full bg-tertiary border-sage-300">
+                    <SelectValue placeholder="Time" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {[...Array(24)].map((_, i) => (
+                      <SelectItem key={i} value={`${i.toString().padStart(2, '0')}:00`}>
+                        {`${i.toString().padStart(2, '0')}:00`}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
-            <Select value={formData.time} onValueChange={(value) => setFormData({ ...formData, time: value })}>
-              <SelectTrigger className="w-full bg-transparent border-sage-300">
-                <SelectValue placeholder="Time" />
-              </SelectTrigger>
-              <SelectContent>
-                {[...Array(24)].map((_, i) => (
-                  <SelectItem key={i} value={`${i.toString().padStart(2, '0')}:00`}>
-                    {`${i.toString().padStart(2, '0')}:00`}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            
+            
             <Textarea
-              placeholder="Special requests..."
+              placeholder="Special requests & dietary requirements..."
               value={formData.notes}
               onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-              className="bg-transparent border-sage-300 italic opacity-70 text-sage-800 resize-none"
+              className="bg-transparent border-sage-300 italic  text-sage-800 resize-none  text-secondary"
             />
             <Button 
               type="submit"
-              className="w-full bg-secondary-900 hover:bg-sec text-white"
+              className="w-1/2 bg-[#C4C7B0] hover:bg-[#C4C7B0]/50 text-secondary text-lg font-baskervville rounded-lg shadow-md flex justify-end"
             >
               Reserve
             </Button>
