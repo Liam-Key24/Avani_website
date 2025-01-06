@@ -7,7 +7,6 @@ import { Button } from './ui/Button'
 import { Input } from './ui/Input'
 import { Select } from './ui/Select'
 import { Textarea } from './ui/Textarea'
-import { Imprima } from 'next/font/google'
 
 export const ReservationForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
