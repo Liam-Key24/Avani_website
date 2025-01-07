@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#C2C5AA]">
       <Nav />
       
-      <section className="py-20 px-8 bg-priamry">
+      <section className="py-10 px-8 bg-priamry">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <ReservationForm />
           <div className="rounded-lg overflow-hidden h-[520px]">

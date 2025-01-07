@@ -38,7 +38,7 @@ export default function ReservationForm() {
               placeholder="Full name"
               value={formData.fullName}
               onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-              className="bg-transparent border-sage-300 italic opacity-70 text-sage-800"
+              className="bg-transparent border-secondary/45 italic opacity-70 text-sage-800"
               required
             />
             <Input
@@ -46,7 +46,7 @@ export default function ReservationForm() {
               placeholder="Email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="bg-transparent border-sage-300 italic opacity-70 text-sage-800"
+              className="bg-transparent border-secondary/45 italic opacity-70 text-sage-800"
               required
             />
             <Input
@@ -54,7 +54,7 @@ export default function ReservationForm() {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="bg-transparent border-sage-300 italic opacity-70 text-sage-800"
+              className="bg-transparent border-secondary/45 italic opacity-70 text-secondary"
               required
             />
             <div className="inline-flex gap-4 w-full">
@@ -63,13 +63,13 @@ export default function ReservationForm() {
                   type="date"
                   value={formData.date}
                   onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                  className="w-full bg-transparent italic text-secondary"
+                  className="w-full border-secondary/45 bg-transparent italic text-secondary"
                   required
                 />
               </div>
               <div className="flex-1">
                 <Select value={formData.guests} onValueChange={(value) => setFormData({ ...formData, guests: value })}>
-                  <SelectTrigger className="w-full bg-transparent border-sage-300">
+                  <SelectTrigger className="w-full bg-transparent border-secondary/45 text-secondary">
                     <SelectValue placeholder="Guests" />
                   </SelectTrigger>
                   <SelectContent>
@@ -83,7 +83,7 @@ export default function ReservationForm() {
               </div>
               <div className="flex-1">
                 <Select value={formData.time} onValueChange={(value) => setFormData({ ...formData, time: value })}>
-                  <SelectTrigger className="w-full bg-tertiary border-sage-300">
+                  <SelectTrigger className="w-full bg-tertiary border-secondary/45">
                     <SelectValue placeholder="Time" />
                   </SelectTrigger>
                   <SelectContent>
@@ -102,11 +102,11 @@ export default function ReservationForm() {
               placeholder="Special requests & dietary requirements..."
               value={formData.notes}
               onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-              className="bg-transparent border-sage-300 italic  text-sage-800 resize-none  text-secondary"
+              className="bg-transparent border-secondary/45 italic  resize-none  text-secondary"
             />
             <Button 
               type="submit"
-              className="w-1/2 bg-[#C4C7B0] hover:bg-[#C4C7B0]/50 text-secondary text-lg font-baskervville rounded-lg shadow-md flex justify-end"
+              className="w-1/2 bg-[#C4C7B0] hover:bg-[#C4C7B0]/50 text-secondary text-lg font-baskervville rounded-lg shadow-md"
             >
               Reserve
             </Button>

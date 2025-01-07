@@ -2,16 +2,16 @@ import Link from 'next/link'
 
 export default function Nav() {
   return (
-    <nav className="flex justify-between items-center py-6 px-8 bg-[#C2C5AA]">
-      <Link href="/" className="text-3xl text-secondary">
+    <nav className="flex justify-between items-center py-1 px-8 bg-[#C2C5AA]">
+      <Link href="/" className="text-[5rem] text-secondary flex flex-col items-center">
         AVANTI
-        <span className="block text-sm text-secondary">TAPAS | PIZZERIA</span>
+        <span className="block text-lg text-secondary">TAPAS | PIZZERIA</span>
       </Link>
-      <div className="space-x-8">
-        <Link href="/contact" className="text-secondary hover:text-sage-600">
+      <div className="space-x-8 text-lg">
+        <Link href="/contact" className="text-secondary hover:text-secondary/45">
           Contact
         </Link>
-        <Link href="/menu" className="text-secondary hover:text-sage-600">
+        <Link href="/menu" className="text-secondary hover:text-secondary/45">
           Menu
         </Link>
       </div>
