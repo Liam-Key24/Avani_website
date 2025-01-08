@@ -8,12 +8,8 @@ export default function Nav() {
         <span className="block text-lg text-secondary">TAPAS | PIZZERIA</span>
       </Link>
       <div className="space-x-8 text-lg">
-        <Link href="/contact" className="text-secondary hover:text-secondary/45">
-          Contact
-        </Link>
-        <Link href="/menu" className="text-secondary hover:text-secondary/45">
-          Menu
-        </Link>
+        <Link href="/contact" className="text-secondary hover:text-secondary/45">Contact</Link>
+        <Link href="/menu" className="text-secondary hover:text-secondary/45">Menu</Link>
       </div>
     </nav>
   )

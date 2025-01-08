@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function MenuSection() {
   return (
-    <section className="py-20 px-8 bg-[#f5f0e8] ">
+    <section className="py-20 px-8 bg-[#f5f0e8]">
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col justify-center items-center">
           <h2 className="text-secondary mb-8">

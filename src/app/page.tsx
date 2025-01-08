@@ -13,7 +13,7 @@ export default function Home() {
           <ReservationForm />
           <div className="rounded-lg overflow-hidden h-[520px]">
             <img
-              src="/restaurant.jpg"
+              src="/2024-08-28.jpg"
               alt="Delicious tapas and pizza"
               className="w-full h-full object-cover"
             />
@@ -25,8 +25,8 @@ export default function Home() {
       <ContactSection />
       
       <footer className="py-8 px-8 bg-[#C2C5AA] text-center">
-        <div className="text-3xl text-secondary mb-2">AVANTI</div>
-        <p className="text-secondary">© 2025 AVANTI. All rights reserved.</p>
+        <div className="text-3xl text-tertiary">AVANTI</div>
+        <p className="text-tertiary text-sm">© 2025 AVANTI</p>
       </footer>
     </main>
   )
